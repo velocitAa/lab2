@@ -1,0 +1,10 @@
+- hosts: user1
+  tasks:
+  - name: install
+    apt:
+     name=nginx state=latest
+  - name: nginx systemd
+    systemd:
+     name: nginx
+     state: started
+
